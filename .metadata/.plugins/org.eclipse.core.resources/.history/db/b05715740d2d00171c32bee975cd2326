@@ -1,0 +1,25 @@
+package testing;
+
+import java.io.IOException;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+//from w w w.ja  v a 2s.c  o m
+public class Main extends JFrame {
+
+  public static void main(String[] args) throws Exception {
+    Main.createAndShowGUI();
+  }
+
+  private static void createAndShowGUI() throws IOException {
+    JFrame frame = new JFrame();
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    String imgsrc = Main.class.getClassLoader().getSystemResource("a.jpg")
+        .toString();
+    frame.getContentPane().add(
+        new JEditorPane("text/html", "<html><img src='" + imgsrc
+            + "' width=200height=200></img>"));
+    frame.pack();
+
+    frame.setVisible(true);
+  }
+}

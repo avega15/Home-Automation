@@ -1,0 +1,69 @@
+package automation;
+
+public   class Person{
+	protected String firstName, lastName;
+	protected Integer id,passCode;
+
+
+
+	public Person(){}
+	
+	public Person(int id,int passCode,String firstName, String lastName){
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.passCode = passCode;
+	}
+
+	
+		public String getFirstName()
+		{
+			return firstName;
+		}
+	     public int getID()
+		{
+			return id;
+		}
+
+		public String getLastName()
+		{
+			return lastName;
+		}
+		
+		public int getPassCode(){
+			return passCode;
+		}
+		
+		public void setFirstName(String firstName)
+		{
+			this.firstName =firstName;
+		}
+	
+		public void setID(Integer id)
+		{
+			this.id =id;
+		}
+		
+		public void setLastName(String lastName)
+		{
+			this.lastName = lastName;
+		}
+		public void setPassCode(Integer passCode){
+			this.passCode = passCode;
+		}
+		
+		public String toString(int a){
+			String output= "" ;
+		       output +=  "Black ID : " + " " + this.id  ;   
+				return output;
+		}
+		
+		 public String toString(){
+	    	  String output= "" ;
+		       output +=  "ID : " + " " + this.id + "\n" + "Pass Code : " + " " + this.passCode + "\n" + "First Name : " + this.firstName + "\n" +
+		    		   "Last Name : "+" " + this.lastName + "\n"  ;   
+				return output;
+	    	
+	    }
+	
+}
